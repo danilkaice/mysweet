@@ -5,15 +5,31 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: rgb(127, 57, 141);
-    color: white;
     font-family: nunito;
 }
 
+/* Анимации */
+.wow {
+    opacity: 0;
+    transition: all 0.7s 0.7s ease-out;
+}
+.animated {
+    opacity: 1;
+}
+
 /* основной див */
-body{
+body, html{
     display: grid;
     justify-content: center;
+    background-color: rgb(127, 57, 141);
+    color: white;
+    width: 100vw;
+    justify-content: center;
+    justify-items: center;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .wrapper{
     display: grid;
@@ -27,7 +43,7 @@ header{
     display: grid;
     grid-template-columns: repeat(2,max-content);
     align-items: center;
-    column-gap: 414.99px;
+    column-gap: 364px;
 }
 .linksH{
     font-size: 18px;
@@ -39,6 +55,7 @@ header{
 /* ссылки */
 a{
     text-decoration: none;
+    color: white;
 }
 
 /* контейнер */
@@ -46,6 +63,9 @@ section{
     display: grid;
     justify-content: center;
     row-gap: 60px;
+    max-width: 1000px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* слоган */
@@ -54,11 +74,14 @@ section{
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
     row-gap: 40px;
+    width: 1000px;
 }
 .sloganP{
     font-size: 128px;
+    width: 1000px;
     font-weight: 800;
     line-height: 1;
+    text-align: left;
 }
 .orderBtn{
     height: 70px;
@@ -67,16 +90,17 @@ section{
     border-radius: 100px;
     border: none;
     background-color: #b44b96;
+    color: white;
 }
 
 /* фото */
 .photoCards3{
     display: grid;
-    grid-template-columns: repeat(3, 330px);
+    grid-template-columns: repeat(3, 320px);
     column-gap: 20px;
 }
 .photoCards3 img{
-    width: 330px;
+    width: 320px;
     border-radius: 30px;
 }
 
@@ -85,8 +109,236 @@ section{
     display: grid;
     grid-template-columns: repeat(2, max-content);
     align-items: center;
+    column-gap: 20px;
 }
 .productInfo{
     display: grid;
-    
+    row-gap: 80px;
+}
+h3{
+    font-size: 40px;
+    line-height: 1;
+}
+.productOpis{
+    display: grid;
+    grid-template-columns: repeat(2,320px);
+    column-gap: 20px;
+    align-items: end;
+}
+.product img{
+    width: 320px;
+}
+.productOpis img{
+    height: 200px;
+    border-radius: 20px;
+}
+.productOpis p{
+    line-height: 1;
+}
+
+/* состав */
+.sost{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    width: 1000px;
+    column-gap: 40px;
+}
+.sostH{
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    width: 200px;
+    row-gap: 10px;
+}
+.sost a{
+    text-decoration: underline;
+}
+.sost h3{
+    font-size: 30px;
+}
+.sostCards{
+    display: grid;
+    grid-template-columns: repeat(3,244px);
+    height: 292px;
+    column-gap: 14px;
+}
+.vkus, .prost, .sahr{
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+
+}
+.vkus{
+    background-image: url(https://static.tildacdn.com/tild3663-3133-4539-b334-646534653339/Mask_group-1.svg);
+}
+.prost{
+    background-image: url(https://static.tildacdn.com/tild6334-6432-4265-a161-366363386266/Mask_group-2.svg);
+}
+.sahr{
+    background-image: url(https://static.tildacdn.com/tild3131-3364-4338-b535-316565303764/Mask_group.svg);
+}
+
+/* преимущества */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 1000px;
+  }
+table td {
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+}
+.preimH{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+    align-items: center;
+}
+.preimH h2{
+    width: 200px;
+    font-weight: 200;
+}
+
+/* вкусы */
+.lineVkus{
+    display: grid;
+    row-gap: 40px;
+}
+.lineVkusCards{
+    display: grid;
+    row-gap: 20px;
+}
+.lVCard{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    column-gap: 44px;
+    align-items: center;
+    border-radius: 20px;
+}
+.lVCard img{
+    border-radius: 20px;
+    width: 250px;
+}
+.lVCard a{
+    text-decoration: underline;
+    text-align: right;
+}
+.lVCard h2{
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#lvc1{
+    background-color: #bf95c0;
+}
+#lvc2{
+    background-color: #aba6d0;
+}
+#lvc3{
+    background-color: #e86294;
+}
+#lvc4{
+    background-color: #f0d7a5;
+    color: #b44b96;
+}
+#lvc5{
+    background-color: #f5c8b2;
+    color: #b44b96;
+}
+
+/* команда */
+.command{
+    display: grid;
+    row-gap: 60px;
+}
+.comandSet{
+    display: grid;
+    grid-template-columns: repeat(3,320px);
+    gap: 20px;
+
+}
+.comandSet img{
+    width: 320px;
+}
+.comandSet div{
+    display: grid;
+    row-gap: 20px;
+    height: fit-content;
+}
+.comandSet a{
+    text-decoration: underline;
+}
+
+/* партнеры */
+.part img{
+    height: 100px;
+    max-width: 300px;
+}
+.part td{
+    justify-content: center;
+}
+.part td div{
+    display: grid;
+    justify-content: center;
+}
+
+/* подвал */
+footer{
+    display: grid;
+    justify-content: center;
+    row-gap: 80px;
+    width:100vw;
+    background-color: #8d91c7;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+.footTop{
+    width: 1000px;
+    display: grid;
+    column-gap: 174.3px;
+    grid-template-columns: repeat(2,max-content);
+}
+.footSlog{
+    display: grid;
+    row-gap: 20px;
+}
+h1{
+    font-size: 140px;
+    line-height: 0.7;
+}
+form{
+    display: grid;
+    row-gap: 30px;
+    width: 300px;
+    height: fit-content;
+}
+form span{
+    font-size: 28px;
+    font-weight: normal;
+    height:fit-content ;
+}
+form input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid whitesmoke;
+    height: 30px;
+}
+form button{
+    border-radius: 100px;
+    border: none;
+    background-color: #b44b96;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+.footBot div{
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 10px;
+}
+#creat{
+    padding-left: 70px;
 }
